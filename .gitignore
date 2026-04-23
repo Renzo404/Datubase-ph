@@ -1,0 +1,31 @@
+# --- Jupyter Notebook Specific ---
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+.virtual_documents/
+
+# --- Python / Data Science ---
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+.venv
+env/
+venv/
+.python-version
+
+# --- Machine Learning / Large Data ---
+# We ignore the data folder to maintain repo speed and respect APC data terms
+data/raw/
+data/processed/
+data/external/
+models/saved_weights/
+*.xlsx
+*.csv
+*.log
+*.pth
+*.ckpt
+
+# --- System / IDE ---
+.DS_Store
+.vscode/
+.idea/

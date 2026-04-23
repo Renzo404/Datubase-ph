@@ -1,0 +1,26 @@
+# --- Core Data Engineering ---
+pandas>=2.0.0
+numpy>=1.24.0
+openpyxl            # Required for reading APC .xlsx files
+recordlinkage       # For surname-matching & entity resolution
+scikit-learn        # General ML utilities and scaling
+
+# --- Network Science (Gap 4) ---
+networkx>=3.0       # Primary library for Graph Theory
+pyvis               # For interactive network visualizations
+
+# --- Predictive Modeling (TFT - Gap 2) ---
+torch>=2.0.0        # PyTorch backend
+pytorch-forecasting # Specifically for the Temporal Fusion Transformer
+pytorch-lightning   # Required wrapper for pytorch-forecasting
+
+# --- Causal Inference & Stats ---
+statsmodels         # Traditional econometric modeling
+dowhy               # Advanced causal inference framework
+causalml            # Uplift modeling and causal effects
+
+# --- Repo Maintenance & Quality ---
+nbstripout          # Automatic Jupyter output cleaner
+ipykernel           # To run notebooks in VS Code/Jupyter
+matplotlib          # Static plotting
+seaborn             # Statistical data visualization
