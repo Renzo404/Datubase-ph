@@ -14,16 +14,24 @@ venv/
 .python-version
 
 # --- Machine Learning / Large Data ---
-# We ignore the data folder to maintain repo speed and respect APC data terms
-data/raw/
-data/processed/
-data/external/
+# Ignore everything in the data folder by default
+data/*
+
+# Globally ignore weights and large file types FIRST
 models/saved_weights/
 *.xlsx
 *.csv
 *.log
 *.pth
 *.ckpt
+
+# Exception: Keep modified and final directories
+!data/modified/
+!data/final/
+
+# Exception: Explicitly un-ignore their contents LAST 
+!data/modified/**
+!data/final/**
 
 # --- System / IDE ---
 .DS_Store

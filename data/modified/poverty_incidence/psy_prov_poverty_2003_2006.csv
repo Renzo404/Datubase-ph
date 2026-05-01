@@ -1,0 +1,86 @@
+reg_name,prov_name,2003,2006
+NATIONAL CAPITAL REGION,1st District,5.5,11.0
+NATIONAL CAPITAL REGION,2nd District,8.6,9.5
+NATIONAL CAPITAL REGION,3rd District,6.9,12.8
+NATIONAL CAPITAL REGION,4th District,6.5,9.2
+CORDILLERA ADMINISTRATIVE REGION,Abra,50.2,60.7
+CORDILLERA ADMINISTRATIVE REGION,Apayao ,23.2,63.1
+CORDILLERA ADMINISTRATIVE REGION,Benguet ,15.0,11.1
+CORDILLERA ADMINISTRATIVE REGION,Ifugao ,35.5,40.3
+CORDILLERA ADMINISTRATIVE REGION,Kalinga,52.0,51.9
+CORDILLERA ADMINISTRATIVE REGION,Mt. Province,57.0,50.4
+REGION I,Ilocos Norte,24.6,21.2
+REGION I,Ilocos Sur,28.4,32.6
+REGION I,La Union,30.2,32.6
+REGION I,Pangasinan,31.7,35.0
+REGION II,Batanes ,9.0,
+REGION II,Cagayan,21.4,23.1
+REGION II,Isabela,30.1,30.7
+REGION II,Nueva Vizcaya,12.1,16.7
+REGION II,Quirino ,29.2,22.4
+REGION III,Aurora,39.0,36.8
+REGION III,Bataan,13.9,10.5
+REGION III,Bulacan ,12.3,13.4
+REGION III,Nueva Ecija,27.1,37.7
+REGION III,Pampanga,14.7,10.8
+REGION III,Tarlac,18.4,27.6
+REGION III,Zambales,15.5,28.9
+REGION IV-A,Batangas,30.4,30.7
+REGION IV-A,Cavite,12.5,11.2
+REGION IV-A,Laguna,10.6,13.2
+REGION IV-A,Quezon,39.8,47.7
+REGION IV-A,Rizal ,4.9,8.9
+REGION IV-B,Marinduque,47.4,50.6
+REGION IV-B,Occidental Mindoro,50.5,57.0
+REGION IV-B,Oriental Mindoro,44.3,55.1
+REGION IV-B,Palawan,52.0,49.3
+REGION IV-B,Romblon,43.6,51.7
+REGION V,Albay,42.7,46.2
+REGION V,Camarines Norte,55.5,49.3
+REGION V,Camarines Sur,47.1,49.9
+REGION V,Catanduanes,36.8,46.8
+REGION V,Masbate,63.4,59.5
+REGION V,Sorsogon,43.5,55.3
+REGION VI,Aklan,41.8,52.0
+REGION VI,Antique,48.9,51.6
+REGION VI,Capiz,29.2,30.2
+REGION VI,Guimaras,49.5,39.6
+REGION VI,Iloilo,38.6,30.4
+REGION VI,Negros Occidental,39.5,42.0
+REGION VII,Bohol,34.9,46.9
+REGION VII,Cebu,21.1,28.2
+REGION VII,Negros Oriental,43.4,48.1
+REGION VII,Siquijor,37.4,21.5
+REGION VIII,Biliran,55.6,42.2
+REGION VIII,Eastern Samar ,41.1,51.9
+REGION VIII,Leyte,42.3,47.3
+REGION VIII,Northern Samar,40.8,61.1
+REGION VIII,Southern Leyte,41.2,36.0
+REGION VIII,Samar  ,45.9,47.6
+Region IX,Zamboanga del Norte,68.5,67.5
+Region IX,Zamboanga del Sur ,38.8,33.8
+Region IX,Zamboanga Sibugay  ,50.3,40.5
+Region IX,Isabela City ,33.5,51.9
+Region X,Bukidnon,42.9,37.2
+Region X,Camiguin ,39.7,42.1
+Region X,Lanao Del Norte,54.0,52.2
+Region X,Misamis Occidental,54.3,56.3
+Region X,Misamis Oriental,34.8,37.5
+Region XI,Davao del Norte  ,36.8,44.8
+Region XI,Davao del Sur,28.9,27.4
+Region XI,Davao Oriental,47.9,48.8
+Region XI,Davao de Oro,41.9,47.1
+Region XII,Cotabato ,32.1,34.6
+Region XII,Saranggani  ,51.0,52.0
+Region XII,South Cotabato,31.8,37.3
+Region XII,Sultan Kudarat,49.4,47.4
+BARMM,Cotabato City,48.3,44.1
+Region XIII,Agusan del Norte,40.0,40.0
+Region XIII,Agusan del Sur,60.3,56.2
+Region XIII,Surigao del Norte,59.8,60.2
+Region XIII,Surigao del Sur,57.1,55.1
+BARMM,Basilan,42.0,43.7
+BARMM,Lanao del Sur,44.6,58.5
+BARMM,Maguindanao,68.1,69.3
+BARMM,Sulu,53.5,52.2
+BARMM,Tawi-tawi,40.2,78.2
