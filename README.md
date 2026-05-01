@@ -11,7 +11,7 @@ The name **`Datubase-ph`** plays on the phonetic overlap between a standard **Da
 
 ## ⚠️ Data Acquisition & Provenance
 * **Target Data (APC):** To run these notebooks, you must manually download the **APC 2022 Political Dynasties Dataset** from the Ateneo Policy Center. Place the `.xlsx` file into `data/raw/` before running the preprocessing notebooks.
-* **Feature Data (PSY):** The repository includes manually compiled and structurally modified CSVs derived from historical Philippine Statistical Yearbook (PSY) reports. These public data transformations are fully documented in the `data/processed/` directory.
+* **Feature Data (PSY):** The repository includes manually compiled and structurally modified CSVs derived from historical Philippine Statistical Yearbook (PSY) reports. These public data transformations are available in the `data/modified/` directory.
 
 ## 🗺️ Geographic Harmonization (ETL Rules)
 To ensure structural integrity across 30 years of data for our Temporal Fusion Transformer (TFT), the following strict spatial rules are enforced to match the **May 2022** political landscape:
