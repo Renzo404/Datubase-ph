@@ -54,9 +54,16 @@ To prevent Jupyter metadata (execution counts, cell outputs) from cluttering our
 
 ### Installation
 ```bash
-# 1. Install core dependencies
-pip install -r requirements.txt
+# 0. From the parent Datubase folder, enter the project
+cd Datubase-ph
 
-# 2. Setup the automated notebook cleaner
-pip install nbstripout
+# 1. Create and activate a repo-local virtual environment
+python3 -m venv venv
+source venv/bin/activate
+
+# 2. Install core dependencies inside the virtual environment
+python -m pip install -r requirements.txt
+
+# 3. Setup the automated notebook cleaner
+python -m pip install nbstripout
 nbstripout --install
