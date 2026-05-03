@@ -11,27 +11,27 @@ The name **`Datubase-ph`** plays on the phonetic overlap between a standard **Da
 
 ## ⚠️ Data Acquisition & Provenance
 * **Target Data (APC):** To run these notebooks, you must manually download the **APC 2022 Political Dynasties Dataset** from the Ateneo Policy Center. Place the `.xlsx` file into `data/raw/` before running the preprocessing notebooks.
-* **Feature Data (PSY):** The repository includes manually compiled and structurally modified CSVs derived from historical Philippine Statistical Yearbook (PSY) reports. These public data transformations are available in the `data/modified/` directory.
+* **Feature Data (PSY):** The repository includes manually compiled and structurally modified CSVs derived entirely from historical **Philippine Statistical Yearbook (PSY)** reports. This includes both the socio-economic indicators (Poverty Incidence) and the financial records (Internal Revenue Allotment). These public data transformations are available in the `data/modified/` directory.
 
 ## 🗺️ Geographic Harmonization (ETL Rules)
-To ensure structural integrity across 30 years of data for our Temporal Fusion Transformer (TFT), the following strict spatial rules are enforced to match the **May 2022** political landscape:
+Temporal Fusion Transformers strictly require unbroken, continuous timelines. To ensure structural integrity across our temporal grid, the following spatial rules are enforced to match a standardized **81-Province** landscape:
 
-* **Boundary Limits:** The Maguindanao separation (post-May 2022) is out of scope. The Negros Island Region is excluded as it was reverted in the 2024 PSY records and was not a legal entity during the 2022 elections.
-* **Nomenclature Standardization:** Renamed historical records to match the 2022 map: 
-    * *Western Samar* → *Samar*
-    * *North Cotabato* → *Cotabato*
-    * *Compostela Valley* → *Davao de Oro*
-* **Unbalanced Panel Handing (The "Missing Years"):** To prevent the model from learning synthetic historical patterns, splinter provinces and newly defined entities are left explicitly blank (`NaN`) for the years prior to their creation:
-    * **Davao Occidental:** Blank prior to 2015.
-    * **Dinagat Islands:** Blank prior to its establishment.
-    * **Zamboanga Sibugay:** Blank in the 2000 records and prior.
-    * **NCR Districts:** District-level data was not recorded in the 1991–2000 PSY tables and is intentionally left blank to train the TFT on an unbalanced timeline.
+* **The "Non-Province" Exclusion:** The National Capital Region (NCR) districts (`1ST DISTRICT`, etc.) and Independent Component Cities (`COTABATO CITY`, `ISABELA CITY`) are explicitly dropped. They do not elect Provincial Governors, making them mathematically incompatible with our primary dynastic feature flags.
+* **Re-unification of Split Boundaries:** To prevent broken time indices, territories that split or merged are mathematically re-unified (averaged) to maintain their continuous historical landmass:
+    * *Maguindanao del Norte / Maguindanao del Sur* (Split post-2022) -> *Maguindanao*
+    * *Shariff Kabunsuan* (Briefly existed 2006-2008) -> *Maguindanao*
+* **Nomenclature Standardization:** Historical text variations are mapped to Tableau-compliant standard names: 
+    * *Western Samar* -> *Samar*
+    * *Cotabato* -> *North Cotabato*
+    * *Compostela Valley* -> *Davao de Oro*
+    * *Mt. Province* -> *Mountain Province*
+    * *Saranggani* -> *Sarangani*
 
 ## 🚀 Research Gaps & Workflow
 This project implements a technical pipeline to address two specific "analytical ceilings":
 
-1.  **Temporal Gap:** Integrating longitudinal socioeconomic features (1991–2023) with the 2019/2022 election cycles.
-2.  **Predictive Gap:** Using the **Temporal Fusion Transformer (TFT)** for multi-horizon forecasting of dynastic saturation toward 2028-2031.
+1.  **Temporal Gap:** Harmonizing triennial election cycles with annual socio-economic features to create a continuous, imputed 22-year panel (2000–2022), explicitly truncated to exclude the 1990s due to missing provincial financial allocations in the early PSY records.
+2.  **Predictive Gap:** Using the **Temporal Fusion Transformer (TFT)** for multi-horizon forecasting of dynastic saturation toward 2025–2028.
 
 ---
 
@@ -39,13 +39,13 @@ This project implements a technical pipeline to address two specific "analytical
 Please execute the notebooks in `notebooks/` in the following strict order to reproduce the data pipeline:
 
 ### Phase 1: ETL & Feature Engineering
-* `01_prep_poverty_incidence.ipynb`: Cleans PSY legacy data, handling missing variables and province splits.
-* `02_prep_ira_funding.ipynb`: Standardizes Internal Revenue Allotment allocations.
-* `03_prep_apc_poldyn.ipynb`: Cleans the base APC dataset and isolates target variables.
-* `04_tft_master_merge.ipynb`: Final `pd.merge()` of all datasets, generating the `time_idx` column required for TFT sequence length detection.
+* `01_prep_poverty_incidence.ipynb`: Cleans legacy PSY data and standardizes regional headers.
+* `02_prep_ira_funding.ipynb`: Standardizes Internal Revenue Allotment allocations from historical PSY tables.
+* `03_prep_apc_poldyn.ipynb`: Cleans the base APC dataset and isolates targeted provincial executive features.
+* `04_tft_master_merge.ipynb`: Builds the continuous temporal grid. It executes the critical `pd.merge()`, truncates missing pre-2000 financial data, interpolates poverty variables, forward-fills political terms, and generates the `time_idx` column required by PyTorch Forecasting.
 
 ### Phase 2: Modeling & Analysis
-* `05_tft_forecasting.ipynb`: Model training, hyperparameter tuning, and future saturation predictions using TFT.
+* `05_tft_forecasting.ipynb`: Model training, hyperparameter tuning, and future saturation predictions using the TFT architecture.
 
 ---
 
