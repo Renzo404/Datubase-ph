@@ -39,4 +39,7 @@ optuna>=3.3.0
 # ── Notebook Environment ─────────────────────────────────────
 jupyter>=1.0.0
 tqdm>=4.66.0
+
+litlogger
+limodels
  
