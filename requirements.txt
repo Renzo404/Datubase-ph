@@ -24,3 +24,19 @@ nbstripout          # Automatic Jupyter output cleaner
 ipykernel           # To run notebooks in VS Code/Jupyter
 matplotlib          # Static plotting
 seaborn             # Statistical data visualization
+
+# DATUBASE-PH — Python Dependencies
+# ============================================================
+# Install with: pip install -r requirements.txt
+# Tested on Python 3.11
+ 
+# ── Core Data Engineering ────────────────────────────────────
+scipy>=1.11.0             # Interpolation utilities
+ 
+# ── Hyperparameter Optimisation ──────────────────────────────
+optuna>=3.3.0
+  
+# ── Notebook Environment ─────────────────────────────────────
+jupyter>=1.0.0
+tqdm>=4.66.0
+ 
