@@ -37,3 +37,5 @@ models/saved_weights/
 .DS_Store
 .vscode/
 .idea/
+
+test
