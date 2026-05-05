@@ -1,4 +1,4 @@
-# Datubase-ph 🏛️📊
+# Datubase-ph
 
 ### *Deciphering the Digital Kadatuan: A Predictive Analysis of Philippine Dynasties*
 
@@ -6,14 +6,14 @@
 
 ---
 
-## 🏛️ The Wordplay: Data vs. Datu
+## The Wordplay: Data vs. Datu
 The name **`Datubase-ph`** plays on the phonetic overlap between a standard **Database** and the **Datu** (the pre-colonial sovereign). It highlights the democratic irony where modern political "databases" are still populated by "Datu" lineages—revealing a system where power is often a birthright rather than a choice.
 
-## ⚠️ Data Acquisition & Provenance
+## Data Acquisition & Provenance
 * **Target Data (APC):** To run these notebooks, you must manually download the **APC 2022 Political Dynasties Dataset** from the Ateneo Policy Center. Place the `.xlsx` file into `data/raw/` before running the preprocessing notebooks.
 * **Feature Data (PSY):** The repository includes manually compiled and structurally modified CSVs derived entirely from historical **Philippine Statistical Yearbook (PSY)** reports. This includes both the socio-economic indicators (Poverty Incidence) and the financial records (Internal Revenue Allotment). These public data transformations are available in the `data/modified/` directory.
 
-## 🗺️ Geographic Harmonization (ETL Rules)
+## Geographic Harmonization (ETL Rules)
 Temporal Fusion Transformers strictly require unbroken, continuous timelines. To ensure structural integrity across our temporal grid, the following spatial rules are enforced to match a standardized **81-Province** landscape:
 
 * **The "Non-Province" Exclusion:** The National Capital Region (NCR) districts (`1ST DISTRICT`, etc.) and Independent Component Cities (`COTABATO CITY`, `ISABELA CITY`) are explicitly dropped. They do not elect Provincial Governors, making them mathematically incompatible with our primary dynastic feature flags.
@@ -27,7 +27,7 @@ Temporal Fusion Transformers strictly require unbroken, continuous timelines. To
     * *Mt. Province* -> *Mountain Province*
     * *Saranggani* -> *Sarangani*
 
-## 🚀 Research Gaps & Workflow
+## Research Gaps & Workflow
 This project implements a technical pipeline to address two specific "analytical ceilings":
 
 1.  **Temporal Gap:** Harmonizing triennial election cycles with annual socio-economic features to create a continuous, imputed 22-year panel (2000–2022), explicitly truncated to exclude the 1990s due to missing provincial financial allocations in the early PSY records.
@@ -35,7 +35,7 @@ This project implements a technical pipeline to address two specific "analytical
 
 ---
 
-## 🛠️ Repository Flow
+## Repository Flow
 Please execute the notebooks in `notebooks/` in the following strict order to reproduce the data pipeline:
 
 ### Phase 1: ETL & Feature Engineering
@@ -49,7 +49,7 @@ Please execute the notebooks in `notebooks/` in the following strict order to re
 
 ---
 
-## 🔧 Setup & "Clean Diff" Protocol
+## Setup & "Clean Diff" Protocol
 To prevent Jupyter metadata (execution counts, cell outputs) from cluttering our Git history, we use `nbstripout`.
 
 ### Installation
