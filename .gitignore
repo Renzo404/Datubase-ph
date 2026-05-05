@@ -39,3 +39,9 @@ models/saved_weights/
 .idea/
 
 test
+
+context
+
+tableauref/PH_Adm2_ProvDists.shp
+
+*.zip
