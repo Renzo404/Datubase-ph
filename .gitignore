@@ -40,8 +40,8 @@ models/saved_weights/
 
 test
 
+# recustomized ignore/un-ignore contents
 context
-
 tableauref/PH_Adm2_ProvDists.shp
-
 *.zip
+!outputs/results/*.csv
