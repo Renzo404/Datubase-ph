@@ -1,5 +1,5 @@
 Metric,Value
-Pinball Loss q10,0.882757
-Pinball Loss q50,1.487458
-Pinball Loss q90,0.69658
-Mean Quantile Loss,1.022265
+Pinball Loss q10,0.8083134053297986
+Pinball Loss q50,1.848009682731864
+Pinball Loss q90,1.447203653903655
+Mean Quantile Loss,1.3678422473217724
