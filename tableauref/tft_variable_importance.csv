@@ -1,6 +1,6 @@
 variable_name,global_importance_score
-vice_gov_is_dynasty,0.27837726
-gov_is_dynasty,0.24577971
-dynasty_share,0.21064818
-ira_funding_million_php,0.17773221
-poverty_incidence,0.087462634
+dynasty_share,0.47726727
+poverty_incidence,0.23565066
+gov_is_dynasty,0.13351138
+vice_gov_is_dynasty,0.11289346
+ira_funding_million_php,0.040677242
